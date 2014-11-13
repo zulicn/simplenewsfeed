@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse" id="navbar" role="navigation">
+        <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-target="#bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav">
+         
+                    <li><a href="#/settings">Settings</a></li>
+                    <li><a href="#" ng-click="logoutUser()">Logout</a></li>
+ 
+ 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h3 id="podnaslov">News</h3>
+
+    <div ng-repeat="feed in feeds | orderBy:'title'" ng-animate="'animate'">
+        
+
+        <p>
+            <div ng-repeat="item in feed.entries" ng-animate="'animate'" class="article">
+                <span class="row">
+                    <a class="h5 col-xs-7" href="{{item.link}}" target="_blank">{{item.title}}</a>
+                    <span class="h6 col-xs-5" ng-model="item.publishedDate">{{item.publishedDate.replace(" -0700", "")}}</span>
+                </span>
+                <span class="row">
+                    <img class="img-rounded col-xs-5" alt="NoPhoto" ng-src="{{item.mediaGroups[0].contents[0].thumbnails[0].url}}">
+                    <span class="h5 col-xs-7" ng-model="item.contentSnippet">{{item.contentSnippet.replace("nbsp;", "").replace("&", "")}}<a href="{{item.link}}">Read more</a></span>
+
+                </span>   
+                <span class="row">         
+                    <a class="h6" href="{{feed.link}}" target="_blank">Source portal: {{feed.title}}</a>
+                </span>
+                
+            </div>
+        </p>
+    </div>
+</div>

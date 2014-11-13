@@ -1,0 +1,43 @@
+<div class="container-fluid" data-ng-controller="editAccCtrl" data-ng-init="init()">
+		<div class="row">			
+			<h3 id="podnaslov" class="col-xs-12"><img class="img-responsive" id="icon" src="icons/account_thumbnail.png">Edit account</h3>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-4">
+				<img class="img-responsive img-circle" id="newavatar" ng-model="user.photo" src="{{user.photo}}">
+			</div>
+		</div>
+		<br>
+		
+		<form class="form-horizontal" role="form" id="editforma">
+		  <div class="form-group">		    
+		    <div class="col-xs-12">
+		     <button type="button" class="btn btn-default form-control big-btn" id="btnAvatar" ng-click="uploadPhoto()">{{photobtn}}</button>
+		    </div>
+		  </div>
+		  <div class="form-group">		    
+		    <div class="col-xs-12">
+		     <button type="button" class="btn btn-default form-control big-btn" ng-click="changeMail()">Change e-mail <span class="data">{{user.email}}</span></button>
+		    </div>
+		  </div>
+		  <div class="form-group">		    
+		    <div class="col-xs-12">
+		     <button type="button" class="btn btn-default form-control big-btn" ng-click="changePass()">Change password</button>
+		    </div>
+		  </div>
+		 
+		  <div class="form-group">
+		    <div class="col-xs-offset-5 col-xs-8">
+		      <button type="button" class="btn btn-default" ng-click="back()">Back</button>
+		      <button type="button" class="btn btn-default" ng-click="apply()">Apply photo</button>
+		    </div>
+		  </div>
+
+		  <div class="form-group">   
+    		<input type="file" id="inputFile" accept="image/*" hidden="true">
+   
+  		  </div>
+		</form>
+
+</div>

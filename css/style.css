@@ -1,0 +1,57 @@
+.page-header h3 {
+	font-family: 'Lobster';
+	color: #d8d8d8;
+	text-align: center;
+}
+
+#main h3 {
+	font-family: 'Calibri';
+	color: black;
+	text-align: left;
+}
+
+.page-header {
+	background: black;
+}
+
+.btn-default {
+	background: #d8d8d8;
+}
+
+.big-btn {
+	opacity:0.9;
+	border: 1px solid #95a5a6;
+	box-shadow: 4px 4px 2px #bdc3c7;
+
+
+}
+
+.article {
+	border: 1px solid #95a5a6;
+	box-shadow: 2px 2px 1px #bdc3c7;
+}
+
+
+#podnaslov {
+	text-align: center;
+	font-family: 'Lobster';
+}
+
+#articlePhoto {
+	width: auto;
+}
+
+#icon {
+	float: right;
+}
+
+#inputFile {
+	visibility: hidden;
+
+}
+
+.data {
+	color: gray;
+	font-size: small;
+}
+
