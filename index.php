@@ -11,7 +11,7 @@
 
 	    <link rel="stylesheet" type="text/css" href="css/style.css">
 	    <script src="js/js/main.js"></script>
-	    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body>
