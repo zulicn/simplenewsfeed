@@ -7,7 +7,14 @@ function head() {
 
 // Pomocne funkcije --- pozivaju se iz metoda post, get, put i delete zavisno od URIa
 function databaseConnection() {
-	$bind = new PDO('mysql:dbname=simpledb;host=localhost', 'root', '');
+	$connstr = "pgsql:"
+    . "host=ec2-50-19-249-214.compute-1.amazonaws.com;"
+    . "dbname=deql52f4608mls;"
+    . "user=nhrnfwpqvplyat;"
+    . "port=5432;"
+    . "sslmode=require;"
+    . "password=yVtAdEt9Rh1d4kzH4gacVW0IW1";
+	$bind = new PDO($connstr); #PDO('mysql:dbname=simpledb;host=localhost', 'root', '');
 	$bind->exec("set names utf8");
 	return $bind;
 }
