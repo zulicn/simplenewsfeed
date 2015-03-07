@@ -1,7 +1,7 @@
 var module = angular.module('restServices', ['ngResource']);
 
 module.factory('usersFactory', function ($resource) { 
-    return $resource('http://localhost/simplenewsfeed/rest/services.php/user', {}, {
+    return $resource('https://simplenewsfeed.herokuapp.com/rest/services.php/user', {}, {
         create: { method: 'POST' }, 
         getLoggedUser: { method:'GET', isArray: false},
         updateUser: {method:'PUT'}
@@ -10,7 +10,7 @@ module.factory('usersFactory', function ($resource) {
 });
 
 module.factory('userFactory', function ($resource) { 
-    return $resource('http://localhost/simplenewsfeed/rest/services.php/login', {}, {
+    return $resource('https://simplenewsfeed.herokuapp.com/rest/services.php/login', {}, {
         login: { method: 'POST'}, 
         logout: {method: 'GET', params: {unset: 'true'}}
     })
@@ -18,7 +18,7 @@ module.factory('userFactory', function ($resource) {
 });
 
 module.factory('portalFactory', function ($resource) { 
-    return $resource('http://localhost/simplenewsfeed/rest/services.php/portal/:id', {}, {
+    return $resource('https://simplenewsfeed.herokuapp.com/rest/services.php/portal/:id', {}, {
         create: { method: 'POST'}, 
         get: { method:'GET' , isArray: true}, 
         deleteById: { method:'DELETE', params: {id: '@id'}}
